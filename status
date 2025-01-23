@@ -1,0 +1,35 @@
+warning: in the working copy of 'pom.xml', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/pom.xml b/pom.xml[m
+[1mindex 05d9d26..0df3969 100644[m
+[1m--- a/pom.xml[m
+[1m+++ b/pom.xml[m
+[36m@@ -44,6 +44,12 @@[m
+ 			<artifactId>spring-cloud-starter-openfeign</artifactId>[m
+ 		</dependency>[m
+ [m
+[32m+[m	[32m<dependency>[m
+[32m+[m[32m    <groupId>javax.validation</groupId>[m
+[32m+[m[32m    <artifactId>validation-api</artifactId>[m
+[32m+[m[32m    <version>2.0.1.Final</version>[m
+[32m+[m	[32m</dependency>[m
+[32m+[m
+ 		<dependency>[m
+ 			<groupId>org.springframework.boot</groupId>[m
+ 			<artifactId>spring-boot-devtools</artifactId>[m
+[1mdiff --git a/src/main/resources/application.yml b/src/main/resources/application.yml[m
+[1mindex 1d8ca0b..ee35be6 100644[m
+[1m--- a/src/main/resources/application.yml[m
+[1m+++ b/src/main/resources/application.yml[m
+[36m@@ -1 +1,10 @@[m
+[31m-spring.application.name=produdoro[m
+[32m+[m[32mserver:[m
+[32m+[m[32m  servlet:[m
+[32m+[m[32m    context-path: /produdoro/api[m
+[32m+[m
+[32m+[m[32mspring:[m
+[32m+[m[32m  data:[m
+[32m+[m[32m    mongodb:[m
+[32m+[m[32m      authentication-database: admin[m
+[32m+[m[32m      uri: ${MONGO_DB_URI:mongodb+srv://rodrigo:81213813@wakanda.fb8gf.mongodb.net/wakanda?retryWrites=true&w=majority}[m
+[32m+[m[32m      auto-index-creation: true[m
+\ No newline at end of file[m
